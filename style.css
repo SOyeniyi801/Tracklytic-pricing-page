@@ -78,11 +78,11 @@ ul .nav-link {
   top: 4px;
   left: 4px;
   height: calc(100% - 8px);
-  width: 50%;
+  width: 48%;
   background: #fff;
   border-radius: 9999px;
   z-index: 1;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 /* card start */
