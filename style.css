@@ -1,6 +1,18 @@
 .global-padding {
   padding: 0px 20px;
 }
+h1, h2, h3 {
+  font-family: Space Grotesk;
+}
+p, ul {
+  font-family: Inter, sans-serif;
+}
+
+.desktop-signin,.mobile-signin {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 5px 5px 5px blue;
+}
 /* navbar start */
 nav {
   display: flex;
@@ -27,8 +39,9 @@ ul .navbar {
   display: block;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   padding: 14px 16px;
+  font-family: Inter;
 }
 
 .nav-link button,
@@ -43,6 +56,8 @@ ul .navbar {
 
 .mobile-signin {
   display: none;
+  width: 50%;
+  align-self: center;
 }
 
 .hamburger {
@@ -79,7 +94,7 @@ ul .navbar {
   background-color: #94bfff;
   border-radius: 9999px;
   padding: 4px;
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   color: #fff;
   cursor: pointer;
@@ -117,7 +132,7 @@ ul .navbar {
 .card-container {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 1.2em;
   justify-content: center;
 }
 .card-box {
@@ -125,13 +140,25 @@ ul .navbar {
   width: 300px;
   padding: 10px 20px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }
 .card-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
+.card-content p {
+  max-width: 75%;
+}
+.plan-type {
+  font-family: Space Grotesk;
+  font-size: 18px;
+  font-weight: bold;
+}
+.strong {
+  font-weight: bold;
+}
 /* faqs accordion */
 
 .faq-container {
@@ -246,6 +273,7 @@ ul .navbar {
 
   .nav-link a {
     text-align: center;
+    font-size: 16px;
   }
 
   .mobile-signin button {
