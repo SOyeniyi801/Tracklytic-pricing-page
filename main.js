@@ -1,3 +1,6 @@
+function toggleMenu() {
+    document.querySelector('.navbar').classList.toggle('show');
+  }
 var acc = document.getElementsByClassName("accordion");
 var i;
 

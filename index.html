@@ -7,15 +7,22 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="nav">
         <span><p>Logo</p></span>
+      
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      
         <ul class="navbar">
           <li class="nav-link"><a href="#">How it works</a></li>
           <li class="nav-link"><a href="#">Pricing Plans</a></li>
           <li class="nav-link"><a href="#">Resources</a></li>
           <li class="nav-link"><a href="#">Help</a></li>
+          <li class="nav-link mobile-signin">
+            <button class=".mobile-signin" type="button">Sign In</button>
+          </li>
         </ul>
-        <button type="button">Sign In</button>
+      
+        <button class="desktop-signin" type="button">Sign In</button>
       </nav>
     </header>
     <div class="spacer-2"></div>
@@ -105,9 +112,6 @@
     </div>
 </section>
     
-
-    
-    
     <div class="spacer-4"></div>
 
     <section>
@@ -121,12 +125,12 @@
                 <div class="accordion-container">
                     <button type="button"class="accordion">Do I need to install anything to use Tracklytic?</button>
                     <div class="panel">
-                        <p>Nope! Just copy and paste a small tracking script into your website. That’s it—no downloads or setup headaches.</p>
+                        <p>Nope! Just copy and paste a small tracking script into your website. That's it—no downloads or setup headaches.</p>
                       </div>
                       
                       <button type="button" class="accordion">What happens after the free trial ends?</button>
                       <div class="panel">
-                        <p>You’ll still have access to your account, but tracking will pause until you choose a plan. No surprise charges, ever.</p>
+                        <p>You'll still have access to your account, but tracking will pause until you choose a plan. No surprise charges, ever.</p>
                       </div>
                       
                       <button type="button" class="accordion">Can I switch plans later?</button>
@@ -136,7 +140,7 @@
 
                       <button type="button" class="accordion">Is my website data safe with Tracklytic?</button>
                       <div class="panel">
-                        <p>Yes. We never sell your data, and all tracking is anonymized. You’re in full control of your insights.</p>
+                        <p>Yes. We never sell your data, and all tracking is anonymized. You're in full control of your insights.</p>
                       </div>
                         </div>
                 </div>
@@ -147,6 +151,16 @@
     </section>
         
     </div>
+    <div class="spacer-8"></div>
+    <section class="cta-section">
+      <div class="global-padding">
+          <div class="cta-content">
+                  <h3>Ready to give us a try?</h3>
+                  <p>Reach out to book a demo with our sales team</p>
+                  <button type="button">Request a Demo</button>
+          </div>
+      </div>
+  </section>
   </body>
   <script src="main.js"></script>
 </html>

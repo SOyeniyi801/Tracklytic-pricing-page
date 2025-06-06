@@ -1,16 +1,21 @@
 .global-padding {
-  padding: 0px 120px;
+  padding: 0px 20px;
 }
 /* navbar start */
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: relative;
 }
-ul .nav-link {
+
+ul .navbar {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .nav-link {
@@ -25,12 +30,35 @@ ul .nav-link {
   font-size: 16px;
   padding: 14px 16px;
 }
+
+.nav-link button,
+.desktop-signin {
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.desktop-signin {
+  display: block;
+}
+
+.mobile-signin {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 /* navbar end */
 .spacer-2 {
   height: 2em;
 }
 .spacer-4 {
   height: 4em;
+}
+.spacer-8 {
+  height: 8em;
 }
 .heading-container {
   display: flex;
@@ -105,7 +133,6 @@ ul .nav-link {
 }
 
 /* faqs accordion */
-/* Style the buttons that are used to open and close the accordion panel */
 
 .faq-container {
   display: flex;
@@ -119,6 +146,7 @@ ul .nav-link {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap: .5em;
 }
 .accordion {
   background-color: #eee;
@@ -126,9 +154,9 @@ ul .nav-link {
   color: #444;
   cursor: pointer;
   padding: 18px;
-  width: 50%;
   text-align: left;
   border: none;
+  border-radius: 8px;
   outline: none;
   transition: 0.4s;
   width: 100%;
@@ -162,4 +190,86 @@ ul .nav-link {
   max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
-  text-align: left;}
+  text-align: left;
+}
+
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+}
+
+.cta-content {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+}
+
+
+@media only screen and (max-width: 992px) {
+  
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-signin {
+    display: none;
+  }
+  .mobile-signin {
+    display: block;
+  }
+  .navbar.show {
+    z-index: 6;
+  }
+
+  ul.navbar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    display: none;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  ul.navbar.show {
+    display: flex;
+  }
+
+  .nav-link a {
+    text-align: center;
+  }
+
+  .mobile-signin button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  
+}
+
+@media (max-width: 350px) {
+  .card-box {
+    width: 250px;
+  }
+}
