@@ -1,17 +1,27 @@
 function toggleMenu() {
     document.querySelector('.navbar').classList.toggle('show');
   }
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+const acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    // Close all other panels
+    for (let j = 0; j < acc.length; j++) {
+      if (acc[j] !== this) {
+        acc[j].classList.remove("active");
+        const otherPanel = acc[j].nextElementSibling;
+        otherPanel.style.maxHeight = null;
+      }
+    }
+
+    // Toggle current panel
     this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
+    const panel = this.nextElementSibling;
+    if (this.classList.contains("active")) {
       panel.style.maxHeight = panel.scrollHeight + "px";
+    } else {
+      panel.style.maxHeight = null;
     }
   });
 }
